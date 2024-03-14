@@ -2,6 +2,9 @@ local cmp = require("cmp")
 local lsp_zero = require("lsp-zero")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
+vim.o.spelllang = "en_us"
+vim.o.spell = true
+
 require("lspconfig").lua_ls.setup({
 	-- ... other configs
 	settings = {
@@ -61,6 +64,9 @@ require("mason-lspconfig").setup({
 		"cssls",
 		"rust_analyzer",
 		"lua_ls",
+		"ruff_lsp",
+		"sqlls",
+		"astro",
 	},
 	handlers = {
 		lsp_zero.default_setup,
